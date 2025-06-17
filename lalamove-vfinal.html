@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lalamove Animation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      text-align: center;
+      background-color: #fff;
+      overflow-x: hidden;
+      color: #222;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .logo {
+      margin-top: 30px;
+    }
+
+    .logo img {
+      width: 180px;
+      height: auto;
+      animation: logoPop 1s ease-in-out;
+    }
+
+    .tagline {
+      color: #f60;
+      font-size: 18px;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    @keyframes logoPop {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .middle-text {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 40px 0 20px;
+      animation: fadeSlide 4s ease-in-out infinite;
+    }
+
+    @keyframes fadeSlide {
+
+      0%,
+      100% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      20%,
+      80% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .truck-wrapper {
+      width: 200px;
+      margin: 30px auto;
+      animation: driveIn 1.5s ease-out forwards;
+    }
+
+    .truck-wrapper img {
+      width: 100%;
+      animation: pulseZoom 2s ease-in-out infinite;
+    }
+
+    @keyframes driveIn {
+      0% {
+        transform: translateX(100vw);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes pulseZoom {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    .price {
+      font-size: 26px;
+      color: #ff6600;
+      font-weight: bold;
+      margin-top: 20px;
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .middle-text {
+        font-size: 20px;
+      }
+
+      .price {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="/Lalamove-Logo.png" alt="Lalamove Logo">
+      <div class="tagline">তৎক্ষণাত ডেলিভারি</div>
+    </div>
+    <div class="middle-text">যখনই প্রয়োজন ট্রাক Lalamove হয়ে যাক!</div>
+    <div class="truck-wrapper">
+      <img src="/Truck.png" alt="ট্রাক ইমেজ">
+    </div>
+    <div class="price">ট্রাক ভাড়া মাত্র ৬৫০ টাকা থেকে শুরু!</div>
+  </div>
+</body>
+
+</html>
